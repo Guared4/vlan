@@ -1,0 +1,23 @@
+- name: Base setup for all hosts
+  hosts: all
+  become: yes
+  roles:
+    - common
+
+- name: Configure VLAN on CentOS hosts (testLAN_centos)
+  hosts: testLAN_centos
+  become: yes
+  roles:
+    - vlan
+
+- name: Configure VLAN on Ubuntu hosts (testLAN_ubuntu)
+  hosts: testLAN_ubuntu
+  become: yes
+  roles:
+    - vlan
+
+- name: Configure bond interfaces on routers (inetRouter и centralRouter)
+  hosts: bond
+  become: yes
+  roles:
+    - bond
