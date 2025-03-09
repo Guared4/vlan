@@ -45,23 +45,22 @@ LACP (англ. link aggregation control protocol) — открытый стан
   
 ## Выполнение    
 ### 1.  С помощью vagrant развернул тестовый стенд из 7 виртуальных машин:    
-|Имя|IP-адрес|VLANID|BONDID|
-|-|-|
-|inetRouter|192.168.57.10|
-|centralRouter|192.168.57.11|
-|office1Router|192.168.57.20|
-|testClient1|192.168.57.21|
-|testServer1|192.168.57.22|
-|testClient2|192.168.57.31|
-|testServer2|192.168.57.32|
-|inetRouter|192.168.255.1||BOND0|
-|centralRouter|192.168.255.9|
-|centralRouter|192.168.255.2||BOND0|
-|office1Router|192.168.255.10|
-|testClient1|10.10.10.254|VLAN10|
-|testServer1|10.10.10.1|VLAN10|
-|testClient2|10.10.10.254|VLAN20|
-|testServer2|10.10.10.1|VLAN20|    
+| Имя          | IP-адрес       | VLANID  | BONDID |
+|-------------|---------------|--------|--------|
+| inetRouter  | 192.168.57.10  |        |        |
+| centralRouter | 192.168.57.11  |        |        |
+| office1Router | 192.168.57.20  |        |        |
+| testClient1  | 192.168.57.21  |        |        |
+| testServer1  | 192.168.57.22  |        |        |
+| testClient2  | 192.168.57.31  |        |        |
+| testServer2  | 192.168.57.32  |        |        |
+| inetRouter  | 192.168.255.1  |        | BOND0  |
+| centralRouter | 192.168.255.9  |        |        |
+| centralRouter | 192.168.255.2  |        | BOND0  |
+| office1Router | 192.168.255.10 |        |        |
+| testClient1  | 10.10.10.254   | VLAN10 |        |
+| testServer1  | 10.10.10.1     | VLAN10 |        |
+| testClient2     
 
 ![alt text](img/network.png)
 
