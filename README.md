@@ -54,9 +54,9 @@ LACP (англ. link aggregation control protocol) — открытый стан
 |testServer1|192.168.57.22|
 |testClient2|192.168.57.31|
 |testServer2|192.168.57.32|
-|inetRouter|192.168.255.1|||BOND0|
+|inetRouter|192.168.255.1||BOND0|
 |centralRouter|192.168.255.9|
-|centralRouter|192.168.255.2|||BOND0|
+|centralRouter|192.168.255.2||BOND0|
 |office1Router|192.168.255.10|
 |testClient1|10.10.10.254|VLAN10|
 |testServer1|10.10.10.1|VLAN10|
