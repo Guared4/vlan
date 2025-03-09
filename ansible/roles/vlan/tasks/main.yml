@@ -1,0 +1,20 @@
+- name: Configure VLAN on CentOS hosts
+  template:
+    src: ifcfg-vlan1.j2
+    dest: /etc/sysconfig/network-scripts/ifcfg-vlan{{ vlan_id }}
+    owner: root
+    group: root
+    mode: 0644
+  when: ansible_os_family == "RedHat"
+  notify: restart network
+
+- name: Configure VLAN on Ubuntu hosts
+  template:
+    src: 50-cloud-init.yaml.j2
+    dest: /etc/netplan/50-cloud-init.yaml
+    owner: root
+    group: root
+    mode: 0644
+  when: ansible_os_family == "Debian"
+  notify: apply netplan
+
